@@ -80,6 +80,8 @@ The `/code` command retrieves the last Authelia verification code on demand.
 - Authelia enforces TOTP on every session — no bypass
 - Fail2ban bans after 3 failed SSH attempts — 12h ban
 - WireGuard tunnel gives access to the server only — not to the host network
+- SSH is accessible from the local network only — consider restricting port 22 
+  to VPN clients exclusively once WireGuard is operational (`ufw allow in on wg0 to any port 22`)
 - Certificate is self-signed — accept the browser warning on first access
 
 ---
